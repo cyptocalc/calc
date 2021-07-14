@@ -8,6 +8,7 @@ const formatNumberString = (strNumber = '') => {
     const parts = strNumber.split('.');
 
     parts[0] = parts[0]
+        .replace(/^0+\d/g, (match) => match.replace(/^0/, ''))
         .split('')
         .reverse()
         .join('')
@@ -48,14 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
         price = data.price;
 
         const initialValue = Number(clearNumberString(payInput.value));
-        getInput.value = formatNumberString((initialValue / price).toFixed(8)).replace(/[\.0]*$/g, '');
+        getInput.value = formatNumberString((initialValue / price).toFixed(8)).replace(/[.0]*$/g, '');
 
         payInput.addEventListener('input', createHandler(payInput, (value) => {
-            getInput.value = formatNumberString((value / price).toFixed(8)).replace(/[\.0]*$/g, '');
+            getInput.value = formatNumberString((value / price).toFixed(8)).replace(/[.0]*$/g, '');
         }));
     
         getInput.addEventListener('input', createHandler(getInput, (value) => {
-            payInput.value = formatNumberString((value * price).toFixed(8)).replace(/[\.0]*$/g, '');
+            payInput.value = formatNumberString((value * price).toFixed(8)).replace(/[.0]*$/g, '');
         }));
 
         payInput.removeAttribute('readonly');
