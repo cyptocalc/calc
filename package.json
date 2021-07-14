@@ -1,0 +1,27 @@
+{
+  "name": "calc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyptocalc/calc.git"
+  },
+  "author": "araneusX",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cyptocalc/calc/issues"
+  },
+  "homepage": "https://github.com/cyptocalc/calc#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
