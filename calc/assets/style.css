@@ -8,6 +8,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -32,7 +33,7 @@ body {
     margin: 0 0 24px;
 
     font-size: 18px;
-    letter-spacing: 0.02;
+    letter-spacing: 0.02em;
 }
 
 form {
@@ -81,6 +82,11 @@ input {
 
     width: 32%;
     height: 100%;
+}
+
+.label-name {
+    font-size: 18px;
+    color: #2A2A2A;
 }
 
 .placeholder {
@@ -141,4 +147,67 @@ a:active {
     background: linear-gradient(269.99deg, #f06c00 0%, #ee7912 51.21%, #f34900 95.46%);
 }   
 
+@media screen and (max-width: 416px) {
+    .wrapper {
+        padding: 5.77vw;
+        border-radius: 5.77vw;
+    }
+    
+    .heading {
+        margin: 0 0 5.77vw;
+        font-size: 4.33vw;
+    }
+    
+    .input-wrapper {
+        border-radius: 2.45vw;
+    }
+    
+    input {
+        height: 13.7vw;
+        padding: 1.22vw 35% 0 4.83vw;
+        font-size: 4.33vw;
+    }
+    
+    .placeholder {
+        position: absolute;
+        top: 4.83vw;
+        left: 4.83vw;
+        font-size: 4.33vw;
+    }
+    
+    input:not(:placeholder-shown)+.placeholder {
+        top: 1.22vw;
+        left: 3.82vw;
+        font-size: 2.88vw;
+    }
+    
+    input:not(:placeholder-shown) {
+        padding-top: 3.35vw;
+    }
 
+    .label-name {
+        font-size: 4.83vw;
+    }
+    
+    .arrow {
+        margin: 2.88vw;
+        width: 3.82vw;
+        height: 3.82vw;
+    }
+    
+    a {
+        border-radius: 2.38vw;
+        font-size: 3.82vw;
+        margin-top: 7.72vw;
+        padding: 2.38vw;
+    }
+    
+    a:hover {
+        box-shadow: 0px 2.88vw 5.77vw rgba(42, 42, 42, 0.07);
+    }
+
+    .label-coin {
+        width: 7.72vw;
+        height: 7.72vw;
+    }
+}
